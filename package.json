@@ -1,0 +1,34 @@
+{
+  "name": "corepubsubmechanism",
+  "version": "1.0.0",
+  "description": "pub sub for the application",
+  "main": "runstockpub.js",
+  "scripts": {
+    "server": "nodemon runstockpub.js",
+    "serverprod": "pm2-runtime start runstockpub.js -i max",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run server",
+    "prod": "npm run serverprod",
+    "start": "pm2 start runstockpub.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajithittan/CorePubSubMechanism.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajithittan/CorePubSubMechanism/issues"
+  },
+  "homepage": "https://github.com/ajithittan/CorePubSubMechanism#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "redis": "^4.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "eslint": "^8.1.0",
+    "nodemon": "^2.0.13"
+  }
+}
