@@ -4,7 +4,8 @@ const redis = require("redis")
 require('dotenv').config()
 const bodyParser = require("body-parser");
 
-
+app.disable('x-powered-by');
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
